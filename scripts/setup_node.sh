@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Node
-apt-get update && \
-  curl -sL https://deb.nodesource.com/setup_14.x | bash && \
-  apt-get install nodejs
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get update && apt-get install -y nodejs
 
 # Yarn
-npm install -g yarn
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+apt-get update && apt-get install -y yarn
