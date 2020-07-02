@@ -39,3 +39,6 @@ RUN export PATH=$PATH:$ANDROID_HOME/emulator\
     && export PATH=$PATH:${GRADLE_PATH}/gradle-${GRADLE_VERSION}/bin\
     && export PATH=$PATH:${MAVEN_PATH}/apache-maven-${MAVEN_VERSION}/bin\
     && echo PATH=$PATH:$ANDROID_HOME/platform-tools>>/etc/bash.bashrc
+
+RUN mkdir /work
+WORKDIR /work
